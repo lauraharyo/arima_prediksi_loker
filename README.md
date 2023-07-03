@@ -30,37 +30,37 @@ Ukuran perusahaan juga diambil sebagai fitur dan dikelompokkan menjadi delapan g
 ### Hasil ARIMA
  Bagian ini menjelaskan hasil dari prediksi ARIMA. Untuk data secara keseluruhan memiliki nilai p-Value sebesar 0.007574, sehingga memenuhi syarat Dicker-Fuller. Hasil prediksi lowongan kerja secara keseluruhan akan menurun hingga Juli 2022 (seperti pada Gambar). Prediksi ini memiliki nilai RSS -1.6647. Selain menentukan prediksi secara keseluruhan, data dikumpulkan berdasarkan jenis industri, jenis kelamin calon pekerja yang diinginkan, dan ukuran besarnya industri.
 
- ![arima_full](gambar\arima_full.png)
+ ![arima_full](gambar/arima_full.png)
 
  #### Berdasarkan Jenis Industri
  Data dikelompokkan berdasarkan jenis industri yang menyediakan lowongan tersebut. Terdapat 53 jenis industri dan satu kelompok tidak mencantumkan jenis industri. Untuk penelitian ini, diambil 5 jenis industri yang memiliki data terbanyak yaitu: perbankan / lembaga pembiayaan, konsultan legal riset, IT dan telekomunikasi, perdagangan komoditas, dan retail distribusi. Persebaran 53 jenis industri dapat dilihat pada gambar berikut.
 
- ![sebaran](gambar\sebaran_industri.png)
+ ![sebaran](gambar/sebaran_industri.png)
 
  Berdasarkan perhitungan Dicker-Fuller, hanya data pada industri konsultan legal riset dan IT telekomunikasi yang tidak stasioner. Data dianggap stasioner jika nilai p-value dibawah 0,05 atau ketika nilai critical value (5%) lebih besar daripada test statistic. Hampir semua nilai memiliki nilai RSS yang kecil dan cenderung negatif. Kategori jenis industri konsultan legal riset memiliki atribut stasioner yang ideal dan memenuhi syarat Dicker-Fuller.   
 
- ![pred_legal](gambar\pred_legal.png)
+ ![pred_legal](gambar/pred_legal.png)
 
 Jika data stasioner, maka prediksi dapat semakin akurat. Pada gambar prediksi konsultan legal riset di atas, jumlah lowongan kerja mengalami kenaikan namun menjelang awal 2022 akan menurun sedikit, namun akan menjadi stabil. 
 
 #### Berdasarkan kriteria jenis kelamin
 Data lowongan pekerjaan dikelompokkan berdasarkan kebutuhannya pada jenis kelamin. Untuk data lowongan yang tidak mencantumkan syarat jenis kelamin akan dianggap dapat diisi oleh kandidat laki-laki maupun perempuan. Nilai RSS untuk kategori laki-laki dan perempuan juga memiliki nilai RSS yang lebih kecil dibandingkan nilai RSS untuk kategori “keduanya”.
 
- ![pred_laki](gambar\pred_laki.png)
+ ![pred_laki](gambar/pred_laki.png)
 
 Berdasarkan jenis kelamin, untuk kategori “laki-laki” (gambar atas) dan “perempuan” (gambar bawah) memiliki tren penurunan, namun tidak drastis dan diprediksi stabil hingga Juli 2022. Prediksi berdasarkan kategori “perempuan” lebih dinamis daripada “laki-laki”.
 
- ![pred_perempuan](gambar\pred_perempuan.png)
+ ![pred_perempuan](gambar/pred_perempuan.png)
 
 #### Berdasarkan jumlah karyawan
 Untuk kategori ini dibagi menjadi delapan kelompok. Industri terkecil memiliki 1-10 karyawan sedangkan, industri besar memiliki lebih dari 10.000 karyawan. Banyaknya kelompok membuat sebaran data menjadi kurang merata sehingga 5 dari 8 kelompok bersifat tidak stasioner. 
 
 Hanya kategori 1-10, 11-50, 51-200, 5001-10000 yang memenuhi syarat Dicker-Fuller yaitu memiliki p-Value kurang dari 0.05. Selain itu, keempat kategori tersebut memiliki kecenderungan untuk bernilai negatif pada RSS, terutama untuk kategori 5001-10000 yang memiliki nilai RSS paling rendah dibanding yang kategori lain, yaitu -8.1001. Gambar grafik prediksi kategori-kategori tersebut berturut-turut dapat dilihat pada gambar-gambar berikut. 
 
- ![pred_category1](gambar\pred_category1.png)
- ![pred_category2](gambar\pred_category2.png)
- ![pred_category3](gambar\pred_category3.png)
- ![pred_category4](gambar\pred_category4.png)
+ ![pred_category1](gambar/pred_category1.png)
+ ![pred_category2](gambar/pred_category2.png)
+ ![pred_category3](gambar/pred_category3.png)
+ ![pred_category4](gambar/pred_category4.png)
  
 Keempat prediksi tersebut mengalami tren yang berbeda dan memiliki kecenderungan untuk tidak mengalami fluktuasi. Penurunan lebih tajam dialami oleh perusahaan yang memiliki 5001-10000. Perusahaan besar lebih memungkinkan mengalami digitalisasi dan otomatisasi dalam operasi bisnisnya sehingga permintaan pegawai dapat berkurang.
 
